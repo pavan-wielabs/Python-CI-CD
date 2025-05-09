@@ -1,10 +1,3 @@
-# def add(a, b):
-#     return a + b
-
-# def subtract(a, b):
-#     return a - b
-# mymodule/math_utils.py
-
 """
 This module contains basic mathematical utility functions.
 """

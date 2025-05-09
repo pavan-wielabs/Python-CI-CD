@@ -1,3 +1,4 @@
+import pytest
 from mymodule.math_utils import add, subtract, multiply, divide
 
 def test_add():
@@ -18,6 +19,5 @@ def test_divide():
     assert divide(10, 5) == 2
     assert divide(-6, 3) == -2
 
-    # Test division by zero
     with pytest.raises(ValueError):
         divide(10, 0)
