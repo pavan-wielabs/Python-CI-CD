@@ -1,4 +1,4 @@
-from module.math_utils import add, subtract
+from mymodule.math_utils import add, subtract
 
 def test_add():
     assert add(2, 3) == 5

@@ -1,0 +1,20 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python distribution package
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+
+# Virtual environment directories
+.venv/
+env/
+venv/
+tox/
+# Egg-info directory
+*.egg-info/
