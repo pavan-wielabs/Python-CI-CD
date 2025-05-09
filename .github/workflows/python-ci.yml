@@ -1,10 +1,10 @@
-name: Python CI
+# name: Python CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
 # jobs:
 #   build:
@@ -28,12 +28,21 @@ on:
 #     - name: Run tox
 #       run: tox
 
+name: Python CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8, 3.9, 3.10, 3.11, 3.12, 3.13]
+
     steps:
     - uses: actions/checkout@v3
 
@@ -48,4 +57,8 @@ jobs:
         pip install tox
 
     - name: Run tox for current Python version
-      run: tox -e py${{ matrix.python-version | replace('.', '') }}
+      run: |
+        version=${{ matrix.python-version }}
+        toxenv=py${version//./}
+        tox -e $toxenv
+
