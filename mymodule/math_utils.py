@@ -23,12 +23,18 @@ def subtract(x, y):
     """
     return x - y
 
-def multiply(a, b):
-    """Multiply two numbers."""
-    return a * b
+def multiply(x, y):
+    """
+    Multiply two numbers.
+    
+    """
+    return x * y
 
-def divide(a, b):
-    """Divide two numbers."""
-    if b == 0:
+def divide(x, y):
+    """
+    Divide two numbers.
+    
+    """
+    if y == 0:
         raise ValueError("Cannot divide by zero.")
-    return a / b
+    return x / y
